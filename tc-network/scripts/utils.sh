@@ -1,14 +1,8 @@
-# verify the result of the end-to-end test
-verifyResult() {
-  if [ $1 -ne 0 ]; then
-    echo "!!!!!!!!!!!!!!! "$2" !!!!!!!!!!!!!!!!"
-    echo "========= ERROR !!! FAILED to execute End-2-End Scenario ==========="
-    echo
-    exit 1
-  fi
-}
+# Author An 2020/6/15
 
-
+export CC_RUNTIME_LANGUAGE=golang
+export GO111MODULE=on
+export GOPROXY=https://goproxy.cn
 
 export PEER0_ORG2_CA=${PWD}/crypto/peerOrganizations/org2.example.com/peers/peer0.org2.example.com/tls/ca.crt
 export PEER0_ORG4_CA=${PWD}/crypto/peerOrganizations/org4.example.com/peers/peer0.org4.example.com/tls/ca.crt
@@ -33,5 +27,15 @@ setEnv() {
     # export CORE_PEER_ADDRESS=localhost:9061
   else
     echo "================== ERROR !!! ORG Unknown =================="
+  fi
+}
+
+# verify the result of the end-to-end test
+verifyResult() {
+  if [ $1 -ne 0 ]; then
+    echo "!!!!!!!!!!!!!!! "$2" !!!!!!!!!!!!!!!!"
+    echo "========= ERROR !!! FAILED to execute End-2-End Scenario ==========="
+    echo
+    exit 1
   fi
 }

@@ -1,0 +1,133 @@
+[36m2020-06-15 16:43:13.117 UTC [bccsp] GetDefault -> DEBU 001[0m Before using BCCSP, please call InitFactories(). Falling back to bootBCCSP.
+[36m2020-06-15 16:43:13.130 UTC [bccsp] GetDefault -> DEBU 002[0m Before using BCCSP, please call InitFactories(). Falling back to bootBCCSP.
+[36m2020-06-15 16:43:13.136 UTC [bccsp_sw] openKeyStore -> DEBU 003[0m KeyStore opened at [/opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/org2.example.com/users/Admin@org2.example.com/msp/keystore]...done
+[36m2020-06-15 16:43:13.137 UTC [msp] getPemMaterialFromDir -> DEBU 004[0m Reading directory /opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/org2.example.com/users/Admin@org2.example.com/msp/signcerts
+[36m2020-06-15 16:43:13.143 UTC [msp] getPemMaterialFromDir -> DEBU 005[0m Inspecting file /opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/org2.example.com/users/Admin@org2.example.com/msp/signcerts/Admin@org2.example.com-cert.pem
+[36m2020-06-15 16:43:13.145 UTC [msp] getPemMaterialFromDir -> DEBU 006[0m Reading directory /opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/org2.example.com/users/Admin@org2.example.com/msp/cacerts
+[36m2020-06-15 16:43:13.147 UTC [msp] getPemMaterialFromDir -> DEBU 007[0m Inspecting file /opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/org2.example.com/users/Admin@org2.example.com/msp/cacerts/ca.org2.example.com-cert.pem
+[36m2020-06-15 16:43:13.149 UTC [msp] getPemMaterialFromDir -> DEBU 008[0m Reading directory /opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/org2.example.com/users/Admin@org2.example.com/msp/admincerts
+[36m2020-06-15 16:43:13.153 UTC [msp] getPemMaterialFromDir -> DEBU 009[0m Reading directory /opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/org2.example.com/users/Admin@org2.example.com/msp/intermediatecerts
+[36m2020-06-15 16:43:13.154 UTC [msp] getMspConfig -> DEBU 00a[0m Intermediate certs folder not found at [/opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/org2.example.com/users/Admin@org2.example.com/msp/intermediatecerts]. Skipping. [stat /opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/org2.example.com/users/Admin@org2.example.com/msp/intermediatecerts: no such file or directory]
+[36m2020-06-15 16:43:13.154 UTC [msp] getPemMaterialFromDir -> DEBU 00b[0m Reading directory /opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/org2.example.com/users/Admin@org2.example.com/msp/tlscacerts
+[36m2020-06-15 16:43:13.156 UTC [msp] getPemMaterialFromDir -> DEBU 00c[0m Inspecting file /opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/org2.example.com/users/Admin@org2.example.com/msp/tlscacerts/tlsca.org2.example.com-cert.pem
+[36m2020-06-15 16:43:13.158 UTC [msp] getPemMaterialFromDir -> DEBU 00d[0m Reading directory /opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/org2.example.com/users/Admin@org2.example.com/msp/tlsintermediatecerts
+[36m2020-06-15 16:43:13.158 UTC [msp] getMspConfig -> DEBU 00e[0m TLS intermediate certs folder not found at [/opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/org2.example.com/users/Admin@org2.example.com/msp/tlsintermediatecerts]. Skipping. [stat /opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/org2.example.com/users/Admin@org2.example.com/msp/tlsintermediatecerts: no such file or directory]
+[36m2020-06-15 16:43:13.158 UTC [msp] getPemMaterialFromDir -> DEBU 00f[0m Reading directory /opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/org2.example.com/users/Admin@org2.example.com/msp/crls
+[36m2020-06-15 16:43:13.159 UTC [msp] getMspConfig -> DEBU 010[0m crls folder not found at [/opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/org2.example.com/users/Admin@org2.example.com/msp/crls]. Skipping. [stat /opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/org2.example.com/users/Admin@org2.example.com/msp/crls: no such file or directory]
+[36m2020-06-15 16:43:13.161 UTC [msp] getMspConfig -> DEBU 011[0m Loading NodeOUs
+[36m2020-06-15 16:43:13.171 UTC [msp] newBccspMsp -> DEBU 012[0m Creating BCCSP-based MSP instance
+[36m2020-06-15 16:43:13.171 UTC [msp] New -> DEBU 013[0m Creating Cache-MSP instance
+[36m2020-06-15 16:43:13.172 UTC [msp] loadLocaMSP -> DEBU 014[0m Created new local MSP
+[36m2020-06-15 16:43:13.172 UTC [msp] Setup -> DEBU 015[0m Setting up MSP instance Org2MSP
+[36m2020-06-15 16:43:13.172 UTC [msp.identity] newIdentity -> DEBU 016[0m Creating identity instance for cert -----BEGIN CERTIFICATE-----
+MIICUzCCAfigAwIBAgIRAMYxF0Uz238K6g98sDVLN0owCgYIKoZIzj0EAwIwczEL
+MAkGA1UEBhMCVVMxEzARBgNVBAgTCkNhbGlmb3JuaWExFjAUBgNVBAcTDVNhbiBG
+cmFuY2lzY28xGTAXBgNVBAoTEG9yZzIuZXhhbXBsZS5jb20xHDAaBgNVBAMTE2Nh
+Lm9yZzIuZXhhbXBsZS5jb20wHhcNMjAwNjE0MTUxOTAwWhcNMzAwNjEyMTUxOTAw
+WjBzMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMN
+U2FuIEZyYW5jaXNjbzEZMBcGA1UEChMQb3JnMi5leGFtcGxlLmNvbTEcMBoGA1UE
+AxMTY2Eub3JnMi5leGFtcGxlLmNvbTBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IA
+BNNhDUxCViUAMxh9O+Vkbrki81+XGJKKzrAT19ybo8PStAxzWmF2Cj4A0p0QleDQ
++F4u2J/NQiXkyi+c41P5n0+jbTBrMA4GA1UdDwEB/wQEAwIBpjAdBgNVHSUEFjAU
+BggrBgEFBQcDAgYIKwYBBQUHAwEwDwYDVR0TAQH/BAUwAwEB/zApBgNVHQ4EIgQg
+uq97mKVld95q5MkfWMlJMSOSJK9Ayxl4uNLWrueSKRgwCgYIKoZIzj0EAwIDSQAw
+RgIhALFF/u7L09xqS9cjTSifFmpzGDgxLVu1xW+y0N24MggkAiEAjpYrTuVxkZaP
+daulvmFw59OVb3BaMUAs3NCzfus90GQ=
+-----END CERTIFICATE-----
+[36m2020-06-15 16:43:13.173 UTC [msp.identity] newIdentity -> DEBU 017[0m Creating identity instance for cert -----BEGIN CERTIFICATE-----
+MIICKjCCAdCgAwIBAgIRAIFUfes0KaMrmyGIBllOlMswCgYIKoZIzj0EAwIwczEL
+MAkGA1UEBhMCVVMxEzARBgNVBAgTCkNhbGlmb3JuaWExFjAUBgNVBAcTDVNhbiBG
+cmFuY2lzY28xGTAXBgNVBAoTEG9yZzIuZXhhbXBsZS5jb20xHDAaBgNVBAMTE2Nh
+Lm9yZzIuZXhhbXBsZS5jb20wHhcNMjAwNjE0MTUxOTAwWhcNMzAwNjEyMTUxOTAw
+WjBrMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMN
+U2FuIEZyYW5jaXNjbzEOMAwGA1UECxMFYWRtaW4xHzAdBgNVBAMMFkFkbWluQG9y
+ZzIuZXhhbXBsZS5jb20wWTATBgcqhkjOPQIBBggqhkjOPQMBBwNCAARhy3c15Tkd
+D0UEAAEwHVkvC+bYPaxQxankUsrzu44UkvnT2ddkaw1qaFg6cXvpI5GMyQSHYE10
+ZBiM/9AXXTnco00wSzAOBgNVHQ8BAf8EBAMCB4AwDAYDVR0TAQH/BAIwADArBgNV
+HSMEJDAigCC6r3uYpWV33mrkyR9YyUkxI5Ikr0DLGXi40tau55IpGDAKBggqhkjO
+PQQDAgNIADBFAiEAqMRFwo7er0RRY46Ll+3GWNUSE48NvtuVfvOudcwlMsECIEj1
+LLgzJUoUcHfvGR1KoaGEul0YLSpwTYCLCkiNUGMt
+-----END CERTIFICATE-----
+[36m2020-06-15 16:43:13.178 UTC [msp.identity] newIdentity -> DEBU 018[0m Creating identity instance for cert -----BEGIN CERTIFICATE-----
+MIICKjCCAdCgAwIBAgIRAIFUfes0KaMrmyGIBllOlMswCgYIKoZIzj0EAwIwczEL
+MAkGA1UEBhMCVVMxEzARBgNVBAgTCkNhbGlmb3JuaWExFjAUBgNVBAcTDVNhbiBG
+cmFuY2lzY28xGTAXBgNVBAoTEG9yZzIuZXhhbXBsZS5jb20xHDAaBgNVBAMTE2Nh
+Lm9yZzIuZXhhbXBsZS5jb20wHhcNMjAwNjE0MTUxOTAwWhcNMzAwNjEyMTUxOTAw
+WjBrMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMN
+U2FuIEZyYW5jaXNjbzEOMAwGA1UECxMFYWRtaW4xHzAdBgNVBAMMFkFkbWluQG9y
+ZzIuZXhhbXBsZS5jb20wWTATBgcqhkjOPQIBBggqhkjOPQMBBwNCAARhy3c15Tkd
+D0UEAAEwHVkvC+bYPaxQxankUsrzu44UkvnT2ddkaw1qaFg6cXvpI5GMyQSHYE10
+ZBiM/9AXXTnco00wSzAOBgNVHQ8BAf8EBAMCB4AwDAYDVR0TAQH/BAIwADArBgNV
+HSMEJDAigCC6r3uYpWV33mrkyR9YyUkxI5Ikr0DLGXi40tau55IpGDAKBggqhkjO
+PQQDAgNIADBFAiEAqMRFwo7er0RRY46Ll+3GWNUSE48NvtuVfvOudcwlMsECIEj1
+LLgzJUoUcHfvGR1KoaGEul0YLSpwTYCLCkiNUGMt
+-----END CERTIFICATE-----
+[36m2020-06-15 16:43:13.179 UTC [msp] setupSigningIdentity -> DEBU 019[0m Signing identity expires at 2030-06-12 15:19:00 +0000 UTC
+[36m2020-06-15 16:43:13.184 UTC [grpc] Infof -> DEBU 01a[0m parsed scheme: ""
+[36m2020-06-15 16:43:13.184 UTC [grpc] Infof -> DEBU 01b[0m scheme "" not registered, fallback to default scheme
+[36m2020-06-15 16:43:13.185 UTC [grpc] Infof -> DEBU 01c[0m ccResolverWrapper: sending update to cc: {[{peer0.org2.example.com:9051  <nil> 0 <nil>}] <nil> <nil>}
+[36m2020-06-15 16:43:13.185 UTC [grpc] Infof -> DEBU 01d[0m ClientConn switching balancer to "pick_first"
+[36m2020-06-15 16:43:13.185 UTC [grpc] Infof -> DEBU 01e[0m Channel switches to new LB policy "pick_first"
+[36m2020-06-15 16:43:13.185 UTC [grpc] Infof -> DEBU 01f[0m Subchannel Connectivity change to CONNECTING
+[36m2020-06-15 16:43:13.186 UTC [grpc] Infof -> DEBU 020[0m Subchannel picks a new address "peer0.org2.example.com:9051" to connect
+[36m2020-06-15 16:43:13.186 UTC [grpc] UpdateSubConnState -> DEBU 021[0m pickfirstBalancer: HandleSubConnStateChange: 0xc00022e1a0, {CONNECTING <nil>}
+[36m2020-06-15 16:43:13.187 UTC [grpc] Infof -> DEBU 022[0m Channel Connectivity change to CONNECTING
+[36m2020-06-15 16:43:13.190 UTC [grpc] Infof -> DEBU 023[0m Subchannel Connectivity change to READY
+[36m2020-06-15 16:43:13.191 UTC [grpc] UpdateSubConnState -> DEBU 024[0m pickfirstBalancer: HandleSubConnStateChange: 0xc00022e1a0, {READY <nil>}
+[36m2020-06-15 16:43:13.191 UTC [grpc] Infof -> DEBU 025[0m Channel Connectivity change to READY
+[36m2020-06-15 16:43:13.195 UTC [grpc] Infof -> DEBU 026[0m parsed scheme: ""
+[36m2020-06-15 16:43:13.195 UTC [grpc] Infof -> DEBU 027[0m scheme "" not registered, fallback to default scheme
+[36m2020-06-15 16:43:13.196 UTC [grpc] Infof -> DEBU 028[0m ccResolverWrapper: sending update to cc: {[{peer0.org2.example.com:9051  <nil> 0 <nil>}] <nil> <nil>}
+[36m2020-06-15 16:43:13.196 UTC [grpc] Infof -> DEBU 029[0m ClientConn switching balancer to "pick_first"
+[36m2020-06-15 16:43:13.196 UTC [grpc] Infof -> DEBU 02a[0m Channel switches to new LB policy "pick_first"
+[36m2020-06-15 16:43:13.196 UTC [grpc] Infof -> DEBU 02b[0m Subchannel Connectivity change to CONNECTING
+[36m2020-06-15 16:43:13.197 UTC [grpc] UpdateSubConnState -> DEBU 02c[0m pickfirstBalancer: HandleSubConnStateChange: 0xc0003eb3e0, {CONNECTING <nil>}
+[36m2020-06-15 16:43:13.197 UTC [grpc] Infof -> DEBU 02e[0m Channel Connectivity change to CONNECTING
+[36m2020-06-15 16:43:13.197 UTC [grpc] Infof -> DEBU 02d[0m Subchannel picks a new address "peer0.org2.example.com:9051" to connect
+[36m2020-06-15 16:43:13.200 UTC [grpc] Infof -> DEBU 02f[0m Subchannel Connectivity change to READY
+[36m2020-06-15 16:43:13.201 UTC [grpc] UpdateSubConnState -> DEBU 030[0m pickfirstBalancer: HandleSubConnStateChange: 0xc0003eb3e0, {READY <nil>}
+[36m2020-06-15 16:43:13.201 UTC [grpc] Infof -> DEBU 031[0m Channel Connectivity change to READY
+[36m2020-06-15 16:43:13.204 UTC [grpc] Infof -> DEBU 032[0m parsed scheme: ""
+[36m2020-06-15 16:43:13.204 UTC [grpc] Infof -> DEBU 033[0m scheme "" not registered, fallback to default scheme
+[36m2020-06-15 16:43:13.205 UTC [grpc] Infof -> DEBU 034[0m ccResolverWrapper: sending update to cc: {[{peer0.org4.example.com:9061  <nil> 0 <nil>}] <nil> <nil>}
+[36m2020-06-15 16:43:13.205 UTC [grpc] Infof -> DEBU 035[0m ClientConn switching balancer to "pick_first"
+[36m2020-06-15 16:43:13.205 UTC [grpc] Infof -> DEBU 036[0m Channel switches to new LB policy "pick_first"
+[36m2020-06-15 16:43:13.205 UTC [grpc] Infof -> DEBU 037[0m Subchannel Connectivity change to CONNECTING
+[36m2020-06-15 16:43:13.205 UTC [grpc] Infof -> DEBU 038[0m Subchannel picks a new address "peer0.org4.example.com:9061" to connect
+[36m2020-06-15 16:43:13.205 UTC [grpc] UpdateSubConnState -> DEBU 039[0m pickfirstBalancer: HandleSubConnStateChange: 0xc00042b4f0, {CONNECTING <nil>}
+[36m2020-06-15 16:43:13.206 UTC [grpc] Infof -> DEBU 03a[0m Channel Connectivity change to CONNECTING
+[36m2020-06-15 16:43:13.209 UTC [grpc] Infof -> DEBU 03b[0m Subchannel Connectivity change to READY
+[36m2020-06-15 16:43:13.209 UTC [grpc] UpdateSubConnState -> DEBU 03c[0m pickfirstBalancer: HandleSubConnStateChange: 0xc00042b4f0, {READY <nil>}
+[36m2020-06-15 16:43:13.209 UTC [grpc] Infof -> DEBU 03d[0m Channel Connectivity change to READY
+[36m2020-06-15 16:43:13.213 UTC [grpc] Infof -> DEBU 03e[0m parsed scheme: ""
+[36m2020-06-15 16:43:13.213 UTC [grpc] Infof -> DEBU 03f[0m scheme "" not registered, fallback to default scheme
+[36m2020-06-15 16:43:13.214 UTC [grpc] Infof -> DEBU 040[0m ccResolverWrapper: sending update to cc: {[{peer0.org4.example.com:9061  <nil> 0 <nil>}] <nil> <nil>}
+[36m2020-06-15 16:43:13.214 UTC [grpc] Infof -> DEBU 041[0m ClientConn switching balancer to "pick_first"
+[36m2020-06-15 16:43:13.214 UTC [grpc] Infof -> DEBU 042[0m Channel switches to new LB policy "pick_first"
+[36m2020-06-15 16:43:13.214 UTC [grpc] Infof -> DEBU 043[0m Subchannel Connectivity change to CONNECTING
+[36m2020-06-15 16:43:13.215 UTC [grpc] Infof -> DEBU 044[0m Subchannel picks a new address "peer0.org4.example.com:9061" to connect
+[36m2020-06-15 16:43:13.215 UTC [grpc] UpdateSubConnState -> DEBU 045[0m pickfirstBalancer: HandleSubConnStateChange: 0xc000200f40, {CONNECTING <nil>}
+[36m2020-06-15 16:43:13.215 UTC [grpc] Infof -> DEBU 046[0m Channel Connectivity change to CONNECTING
+[36m2020-06-15 16:43:13.219 UTC [grpc] Infof -> DEBU 047[0m Subchannel Connectivity change to READY
+[36m2020-06-15 16:43:13.219 UTC [grpc] UpdateSubConnState -> DEBU 048[0m pickfirstBalancer: HandleSubConnStateChange: 0xc000200f40, {READY <nil>}
+[36m2020-06-15 16:43:13.220 UTC [grpc] Infof -> DEBU 049[0m Channel Connectivity change to READY
+[36m2020-06-15 16:43:13.223 UTC [msp] GetDefaultSigningIdentity -> DEBU 04a[0m Obtaining default signing identity
+[36m2020-06-15 16:43:13.228 UTC [grpc] WithKeepaliveParams -> DEBU 04b[0m Adjusting keepalive ping interval to minimum period of 10s
+[36m2020-06-15 16:43:13.228 UTC [grpc] Infof -> DEBU 04c[0m parsed scheme: ""
+[36m2020-06-15 16:43:13.228 UTC [grpc] Infof -> DEBU 04d[0m scheme "" not registered, fallback to default scheme
+[36m2020-06-15 16:43:13.229 UTC [grpc] Infof -> DEBU 04e[0m ccResolverWrapper: sending update to cc: {[{orderer.example.com:7050  <nil> 0 <nil>}] <nil> <nil>}
+[36m2020-06-15 16:43:13.229 UTC [grpc] Infof -> DEBU 04f[0m ClientConn switching balancer to "pick_first"
+[36m2020-06-15 16:43:13.229 UTC [grpc] Infof -> DEBU 050[0m Channel switches to new LB policy "pick_first"
+[36m2020-06-15 16:43:13.230 UTC [grpc] Infof -> DEBU 051[0m Subchannel Connectivity change to CONNECTING
+[36m2020-06-15 16:43:13.230 UTC [grpc] Infof -> DEBU 052[0m Subchannel picks a new address "orderer.example.com:7050" to connect
+[36m2020-06-15 16:43:13.230 UTC [grpc] UpdateSubConnState -> DEBU 053[0m pickfirstBalancer: HandleSubConnStateChange: 0xc00039a880, {CONNECTING <nil>}
+[36m2020-06-15 16:43:13.231 UTC [grpc] Infof -> DEBU 054[0m Channel Connectivity change to CONNECTING
+[36m2020-06-15 16:43:13.239 UTC [grpc] Infof -> DEBU 055[0m Subchannel Connectivity change to READY
+[36m2020-06-15 16:43:13.240 UTC [grpc] UpdateSubConnState -> DEBU 056[0m pickfirstBalancer: HandleSubConnStateChange: 0xc00039a880, {READY <nil>}
+[36m2020-06-15 16:43:13.240 UTC [grpc] Infof -> DEBU 057[0m Channel Connectivity change to READY
+[36m2020-06-15 16:43:13.241 UTC [msp.identity] Sign -> DEBU 058[0m Sign: plaintext: 0AC7070A6F08031A0B08A1CA9EF70510...610A033130300A01620A033130301801 
+[36m2020-06-15 16:43:13.242 UTC [msp.identity] Sign -> DEBU 059[0m Sign: digest: 63F5CDAC8A619AF4C333905DC0422379764C318F2AD75015C6556BB49AB9D35A 
+[36m2020-06-15 16:43:13.251 UTC [msp.identity] Sign -> DEBU 05a[0m Sign: plaintext: 0AC7070A6F08031A0B08A1CA9EF70510...F062CBCA97D2B1EB3578A39B473DB79C 
+[36m2020-06-15 16:43:13.252 UTC [msp.identity] Sign -> DEBU 05b[0m Sign: digest: EF7FE6856222C7819D0D8748C2C1D9737F363FABA631D3124C3796B46B2D34B1 
+[36m2020-06-15 16:43:13.267 UTC [chaincodeCmd] chaincodeInvokeOrQuery -> DEBU 05c[0m ESCC invoke result: version:1 response:<status:200 > payload:"\n X\234\361\311\231\237Bc:\033\346\225\031h`\267\000F\311K\013:\200\205*/,j\223\217\334\207\022\237\001\n\210\001\0229\n\n_lifecycle\022+\n)\n#namespaces/fields/abstore1/Sequence\022\002\010\020\022K\n\010abstore1\022?\n\022\n\020\000\364\217\277\277initialized\032\025\n\020\000\364\217\277\277initialized\032\0011\032\010\n\001a\032\003100\032\010\n\001b\032\003100\032\003\010\310\001\"\r\022\010abstore1\032\0011" endorsement:<endorser:"\n\007Org4MSP\022\252\006-----BEGIN CERTIFICATE-----\nMIICKTCCAc+gAwIBAgIRANKLGnNTNTMz71nY3WlqcHMwCgYIKoZIzj0EAwIwczEL\nMAkGA1UEBhMCVVMxEzARBgNVBAgTCkNhbGlmb3JuaWExFjAUBgNVBAcTDVNhbiBG\ncmFuY2lzY28xGTAXBgNVBAoTEG9yZzQuZXhhbXBsZS5jb20xHDAaBgNVBAMTE2Nh\nLm9yZzQuZXhhbXBsZS5jb20wHhcNMjAwNjE0MTUxOTAwWhcNMzAwNjEyMTUxOTAw\nWjBqMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMN\nU2FuIEZyYW5jaXNjbzENMAsGA1UECxMEcGVlcjEfMB0GA1UEAxMWcGVlcjAub3Jn\nNC5leGFtcGxlLmNvbTBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABHgyXff129b7\niPdtxkXe6w7Ld33peWIZF3eBfBsNmYZMVV3IRxapM/hH4X7ArMpJYvUYxXqNkoq5\nOclpBtfy5IajTTBLMA4GA1UdDwEB/wQEAwIHgDAMBgNVHRMBAf8EAjAAMCsGA1Ud\nIwQkMCKAIPPCAo5ikH8k5v5pOLtPL0y6rhWnl2UnPkM5Z6iniL/KMAoGCCqGSM49\nBAMCA0gAMEUCIQDV9bRruOil2YtBk7gb+hbxUsXmQqZmX22rQK6OzQ6HmgIgTZLP\n1LcQ7K72BGsm1aQKA3NxPYMReOTybvtnCfrS3Kc=\n-----END CERTIFICATE-----\n" signature:"0E\002!\000\274c\236)\021\277/\245Ug\276\262\004\225\034\250\275\016V\217\300\310\277\306\345\334\355I\323\026\277T\002 \177\006\265\241z\266\354\316\022CR\020\353\225\306*\236\027\213\030\257\t\2328A\234c\362\257\273\326T" > 
+[34m2020-06-15 16:43:13.267 UTC [chaincodeCmd] chaincodeInvokeOrQuery -> INFO 05d[0m Chaincode invoke successful. result: status:200 

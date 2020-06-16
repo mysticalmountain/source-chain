@@ -146,12 +146,67 @@ function createChannel() {
 
 function deployCC() {
 
+	CHANNEL_NAME="$1"
+	CC_NAME="$2"
+	CC_PATH="$3"
+	VERSION="$4"
+	echo "CHANNEL_NAME=$CHANNEL_NAME"
+	echo "CC_NAME=$CC_NAME"
+	echo "CC_PATH=$CC_PATH"
+	echo "VERSION=$VERSION"
+
+	
 	echo "##########################################################"
-	echo "Create channel $CHANNEL_NAME begin ..."
-	docker exec cli scripts/chaincode.sh $CHANNEL_NAME "packageCC" "abstore" "/opt/gopath/src/github.com/abstores/go/" "1"
+	echo "package chaincode ${CC_NAME} begin ..."
+	docker exec cli scripts/chaincode.sh $CHANNEL_NAME "packageCC" $CC_NAME $CC_PATH $VERSION
 	res=$?
 	verifyResult $res "Error Create channel failed"
 	echo "Success !!! Create channel $CHANNEL_NAME successed"
+
+	echo "##########################################################"
+	echo "Install chaincode ${CC_NAME} begin ..."
+	docker exec cli scripts/chaincode.sh $CHANNEL_NAME "installCC" $CC_NAME
+	res=$?
+	verifyResult $res "Error Create channel failed"
+	echo "Success !!! Create channel $CHANNEL_NAME successed"
+
+	echo "##########################################################"
+	echo "ApproveForMyOrg chaincode ${CC_NAME} begin ..."
+	docker exec cli scripts/chaincode.sh $CHANNEL_NAME "approveForMyOrg" $CC_NAME $VERSION
+	res=$?
+	verifyResult $res "Error Create channel failed"
+	echo "Success !!! Create channel $CHANNEL_NAME successed"
+
+	echo "##########################################################"
+	echo "ApproveForMyOrg chaincode ${CC_NAME} begin ..."
+	docker exec cli scripts/chaincode.sh $CHANNEL_NAME "checkCommitReadiness" $CC_NAME $VERSION
+	res=$?
+	verifyResult $res "Error Create channel failed"
+	echo "Success !!! Create channel $CHANNEL_NAME successed"
+
+	echo "##########################################################"
+	echo "ApproveForMyOrg chaincode ${CC_NAME} begin ..."
+	docker exec cli scripts/chaincode.sh $CHANNEL_NAME "commitChaincodeDefinition" $CC_NAME $VERSION
+	res=$?
+	verifyResult $res "Error Create channel failed"
+	echo "Success !!! Create channel $CHANNEL_NAME successed"
+
+
+	echo "##########################################################"
+	echo "ApproveForMyOrg chaincode ${CC_NAME} begin ..."
+	docker exec cli scripts/chaincode.sh $CHANNEL_NAME "queryCommitted" $CC_NAME
+	res=$?
+	verifyResult $res "Error Create channel failed"
+	echo "Success !!! Create channel $CHANNEL_NAME successed"
+
+	echo "##########################################################"
+	echo "ApproveForMyOrg chaincode ${CC_NAME} begin ..."
+	docker exec cli scripts/chaincode.sh $CHANNEL_NAME "chaincodeInvokeInit" $CC_NAME
+	res=$?
+	verifyResult $res "Error Create channel failed"
+	echo "Success !!! Create channel $CHANNEL_NAME successed"
+
+
 
 }
 
@@ -206,13 +261,12 @@ else
   shift
 fi
 
-
 if [ "${MODE}" == "up" ]; then
   networkUp
 elif [ "${MODE}" == "createChannel" ]; then
   createChannel
 elif [ "${MODE}" == "deployCC" ]; then
-  deployCC
+  deployCC $1 $2 $3 $4
 elif [ "${MODE}" == "down" ]; then
   networkDown
 elif [ "${MODE}" == "restart" ]; then
@@ -220,6 +274,7 @@ elif [ "${MODE}" == "restart" ]; then
   networkUp
 else
   # printHelp
+  echo "Failed MODE not found in network ..."
   exit 1
 fi
 

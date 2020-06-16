@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Author AnDongxu 2020/6/15
+# Author An 2020/6/15
 
 createChannel() {
 	echo

@@ -1,25 +1,25 @@
-[36m2020-06-15 08:10:20.629 UTC [bccsp] GetDefault -> DEBU 001[0m Before using BCCSP, please call InitFactories(). Falling back to bootBCCSP.
-[36m2020-06-15 08:10:20.641 UTC [bccsp] GetDefault -> DEBU 002[0m Before using BCCSP, please call InitFactories(). Falling back to bootBCCSP.
-[36m2020-06-15 08:10:20.652 UTC [bccsp_sw] openKeyStore -> DEBU 003[0m KeyStore opened at [/opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/org2.example.com/users/Admin@org2.example.com/msp/keystore]...done
-[36m2020-06-15 08:10:20.652 UTC [msp] getPemMaterialFromDir -> DEBU 004[0m Reading directory /opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/org2.example.com/users/Admin@org2.example.com/msp/signcerts
-[36m2020-06-15 08:10:20.654 UTC [msp] getPemMaterialFromDir -> DEBU 005[0m Inspecting file /opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/org2.example.com/users/Admin@org2.example.com/msp/signcerts/Admin@org2.example.com-cert.pem
-[36m2020-06-15 08:10:20.656 UTC [msp] getPemMaterialFromDir -> DEBU 006[0m Reading directory /opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/org2.example.com/users/Admin@org2.example.com/msp/cacerts
-[36m2020-06-15 08:10:20.658 UTC [msp] getPemMaterialFromDir -> DEBU 007[0m Inspecting file /opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/org2.example.com/users/Admin@org2.example.com/msp/cacerts/ca.org2.example.com-cert.pem
-[36m2020-06-15 08:10:20.660 UTC [msp] getPemMaterialFromDir -> DEBU 008[0m Reading directory /opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/org2.example.com/users/Admin@org2.example.com/msp/admincerts
-[36m2020-06-15 08:10:20.664 UTC [msp] getPemMaterialFromDir -> DEBU 009[0m Reading directory /opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/org2.example.com/users/Admin@org2.example.com/msp/intermediatecerts
-[36m2020-06-15 08:10:20.665 UTC [msp] getMspConfig -> DEBU 00a[0m Intermediate certs folder not found at [/opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/org2.example.com/users/Admin@org2.example.com/msp/intermediatecerts]. Skipping. [stat /opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/org2.example.com/users/Admin@org2.example.com/msp/intermediatecerts: no such file or directory]
-[36m2020-06-15 08:10:20.665 UTC [msp] getPemMaterialFromDir -> DEBU 00b[0m Reading directory /opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/org2.example.com/users/Admin@org2.example.com/msp/tlscacerts
-[36m2020-06-15 08:10:20.669 UTC [msp] getPemMaterialFromDir -> DEBU 00c[0m Inspecting file /opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/org2.example.com/users/Admin@org2.example.com/msp/tlscacerts/tlsca.org2.example.com-cert.pem
-[36m2020-06-15 08:10:20.671 UTC [msp] getPemMaterialFromDir -> DEBU 00d[0m Reading directory /opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/org2.example.com/users/Admin@org2.example.com/msp/tlsintermediatecerts
-[36m2020-06-15 08:10:20.671 UTC [msp] getMspConfig -> DEBU 00e[0m TLS intermediate certs folder not found at [/opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/org2.example.com/users/Admin@org2.example.com/msp/tlsintermediatecerts]. Skipping. [stat /opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/org2.example.com/users/Admin@org2.example.com/msp/tlsintermediatecerts: no such file or directory]
-[36m2020-06-15 08:10:20.671 UTC [msp] getPemMaterialFromDir -> DEBU 00f[0m Reading directory /opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/org2.example.com/users/Admin@org2.example.com/msp/crls
-[36m2020-06-15 08:10:20.672 UTC [msp] getMspConfig -> DEBU 010[0m crls folder not found at [/opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/org2.example.com/users/Admin@org2.example.com/msp/crls]. Skipping. [stat /opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/org2.example.com/users/Admin@org2.example.com/msp/crls: no such file or directory]
-[36m2020-06-15 08:10:20.674 UTC [msp] getMspConfig -> DEBU 011[0m Loading NodeOUs
-[36m2020-06-15 08:10:20.679 UTC [msp] newBccspMsp -> DEBU 012[0m Creating BCCSP-based MSP instance
-[36m2020-06-15 08:10:20.679 UTC [msp] New -> DEBU 013[0m Creating Cache-MSP instance
-[36m2020-06-15 08:10:20.679 UTC [msp] loadLocaMSP -> DEBU 014[0m Created new local MSP
-[36m2020-06-15 08:10:20.679 UTC [msp] Setup -> DEBU 015[0m Setting up MSP instance Org2MSP
-[36m2020-06-15 08:10:20.680 UTC [msp.identity] newIdentity -> DEBU 016[0m Creating identity instance for cert -----BEGIN CERTIFICATE-----
+[36m2020-06-15 16:43:04.735 UTC [bccsp] GetDefault -> DEBU 001[0m Before using BCCSP, please call InitFactories(). Falling back to bootBCCSP.
+[36m2020-06-15 16:43:04.746 UTC [bccsp] GetDefault -> DEBU 002[0m Before using BCCSP, please call InitFactories(). Falling back to bootBCCSP.
+[36m2020-06-15 16:43:04.752 UTC [bccsp_sw] openKeyStore -> DEBU 003[0m KeyStore opened at [/opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/org2.example.com/users/Admin@org2.example.com/msp/keystore]...done
+[36m2020-06-15 16:43:04.753 UTC [msp] getPemMaterialFromDir -> DEBU 004[0m Reading directory /opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/org2.example.com/users/Admin@org2.example.com/msp/signcerts
+[36m2020-06-15 16:43:04.758 UTC [msp] getPemMaterialFromDir -> DEBU 005[0m Inspecting file /opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/org2.example.com/users/Admin@org2.example.com/msp/signcerts/Admin@org2.example.com-cert.pem
+[36m2020-06-15 16:43:04.760 UTC [msp] getPemMaterialFromDir -> DEBU 006[0m Reading directory /opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/org2.example.com/users/Admin@org2.example.com/msp/cacerts
+[36m2020-06-15 16:43:04.763 UTC [msp] getPemMaterialFromDir -> DEBU 007[0m Inspecting file /opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/org2.example.com/users/Admin@org2.example.com/msp/cacerts/ca.org2.example.com-cert.pem
+[36m2020-06-15 16:43:04.764 UTC [msp] getPemMaterialFromDir -> DEBU 008[0m Reading directory /opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/org2.example.com/users/Admin@org2.example.com/msp/admincerts
+[36m2020-06-15 16:43:04.766 UTC [msp] getPemMaterialFromDir -> DEBU 009[0m Reading directory /opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/org2.example.com/users/Admin@org2.example.com/msp/intermediatecerts
+[36m2020-06-15 16:43:04.768 UTC [msp] getMspConfig -> DEBU 00a[0m Intermediate certs folder not found at [/opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/org2.example.com/users/Admin@org2.example.com/msp/intermediatecerts]. Skipping. [stat /opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/org2.example.com/users/Admin@org2.example.com/msp/intermediatecerts: no such file or directory]
+[36m2020-06-15 16:43:04.768 UTC [msp] getPemMaterialFromDir -> DEBU 00b[0m Reading directory /opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/org2.example.com/users/Admin@org2.example.com/msp/tlscacerts
+[36m2020-06-15 16:43:04.776 UTC [msp] getPemMaterialFromDir -> DEBU 00c[0m Inspecting file /opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/org2.example.com/users/Admin@org2.example.com/msp/tlscacerts/tlsca.org2.example.com-cert.pem
+[36m2020-06-15 16:43:04.778 UTC [msp] getPemMaterialFromDir -> DEBU 00d[0m Reading directory /opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/org2.example.com/users/Admin@org2.example.com/msp/tlsintermediatecerts
+[36m2020-06-15 16:43:04.779 UTC [msp] getMspConfig -> DEBU 00e[0m TLS intermediate certs folder not found at [/opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/org2.example.com/users/Admin@org2.example.com/msp/tlsintermediatecerts]. Skipping. [stat /opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/org2.example.com/users/Admin@org2.example.com/msp/tlsintermediatecerts: no such file or directory]
+[36m2020-06-15 16:43:04.779 UTC [msp] getPemMaterialFromDir -> DEBU 00f[0m Reading directory /opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/org2.example.com/users/Admin@org2.example.com/msp/crls
+[36m2020-06-15 16:43:04.780 UTC [msp] getMspConfig -> DEBU 010[0m crls folder not found at [/opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/org2.example.com/users/Admin@org2.example.com/msp/crls]. Skipping. [stat /opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/org2.example.com/users/Admin@org2.example.com/msp/crls: no such file or directory]
+[36m2020-06-15 16:43:04.783 UTC [msp] getMspConfig -> DEBU 011[0m Loading NodeOUs
+[36m2020-06-15 16:43:04.794 UTC [msp] newBccspMsp -> DEBU 012[0m Creating BCCSP-based MSP instance
+[36m2020-06-15 16:43:04.794 UTC [msp] New -> DEBU 013[0m Creating Cache-MSP instance
+[36m2020-06-15 16:43:04.795 UTC [msp] loadLocaMSP -> DEBU 014[0m Created new local MSP
+[36m2020-06-15 16:43:04.795 UTC [msp] Setup -> DEBU 015[0m Setting up MSP instance Org2MSP
+[36m2020-06-15 16:43:04.796 UTC [msp.identity] newIdentity -> DEBU 016[0m Creating identity instance for cert -----BEGIN CERTIFICATE-----
 MIICUzCCAfigAwIBAgIRAMYxF0Uz238K6g98sDVLN0owCgYIKoZIzj0EAwIwczEL
 MAkGA1UEBhMCVVMxEzARBgNVBAgTCkNhbGlmb3JuaWExFjAUBgNVBAcTDVNhbiBG
 cmFuY2lzY28xGTAXBgNVBAoTEG9yZzIuZXhhbXBsZS5jb20xHDAaBgNVBAMTE2Nh
@@ -34,7 +34,7 @@ uq97mKVld95q5MkfWMlJMSOSJK9Ayxl4uNLWrueSKRgwCgYIKoZIzj0EAwIDSQAw
 RgIhALFF/u7L09xqS9cjTSifFmpzGDgxLVu1xW+y0N24MggkAiEAjpYrTuVxkZaP
 daulvmFw59OVb3BaMUAs3NCzfus90GQ=
 -----END CERTIFICATE-----
-[36m2020-06-15 08:10:20.680 UTC [msp.identity] newIdentity -> DEBU 017[0m Creating identity instance for cert -----BEGIN CERTIFICATE-----
+[36m2020-06-15 16:43:04.796 UTC [msp.identity] newIdentity -> DEBU 017[0m Creating identity instance for cert -----BEGIN CERTIFICATE-----
 MIICKjCCAdCgAwIBAgIRAIFUfes0KaMrmyGIBllOlMswCgYIKoZIzj0EAwIwczEL
 MAkGA1UEBhMCVVMxEzARBgNVBAgTCkNhbGlmb3JuaWExFjAUBgNVBAcTDVNhbiBG
 cmFuY2lzY28xGTAXBgNVBAoTEG9yZzIuZXhhbXBsZS5jb20xHDAaBgNVBAMTE2Nh
@@ -48,7 +48,7 @@ HSMEJDAigCC6r3uYpWV33mrkyR9YyUkxI5Ikr0DLGXi40tau55IpGDAKBggqhkjO
 PQQDAgNIADBFAiEAqMRFwo7er0RRY46Ll+3GWNUSE48NvtuVfvOudcwlMsECIEj1
 LLgzJUoUcHfvGR1KoaGEul0YLSpwTYCLCkiNUGMt
 -----END CERTIFICATE-----
-[36m2020-06-15 08:10:20.684 UTC [msp.identity] newIdentity -> DEBU 018[0m Creating identity instance for cert -----BEGIN CERTIFICATE-----
+[36m2020-06-15 16:43:04.808 UTC [msp.identity] newIdentity -> DEBU 018[0m Creating identity instance for cert -----BEGIN CERTIFICATE-----
 MIICKjCCAdCgAwIBAgIRAIFUfes0KaMrmyGIBllOlMswCgYIKoZIzj0EAwIwczEL
 MAkGA1UEBhMCVVMxEzARBgNVBAgTCkNhbGlmb3JuaWExFjAUBgNVBAcTDVNhbiBG
 cmFuY2lzY28xGTAXBgNVBAoTEG9yZzIuZXhhbXBsZS5jb20xHDAaBgNVBAMTE2Nh
@@ -62,33 +62,210 @@ HSMEJDAigCC6r3uYpWV33mrkyR9YyUkxI5Ikr0DLGXi40tau55IpGDAKBggqhkjO
 PQQDAgNIADBFAiEAqMRFwo7er0RRY46Ll+3GWNUSE48NvtuVfvOudcwlMsECIEj1
 LLgzJUoUcHfvGR1KoaGEul0YLSpwTYCLCkiNUGMt
 -----END CERTIFICATE-----
-[36m2020-06-15 08:10:20.684 UTC [msp] setupSigningIdentity -> DEBU 019[0m Signing identity expires at 2030-06-12 15:19:00 +0000 UTC
-[36m2020-06-15 08:10:20.687 UTC [msp] GetDefaultSigningIdentity -> DEBU 01a[0m Obtaining default signing identity
-[36m2020-06-15 08:10:20.691 UTC [grpc] Infof -> DEBU 01b[0m parsed scheme: ""
-[36m2020-06-15 08:10:20.691 UTC [grpc] Infof -> DEBU 01c[0m scheme "" not registered, fallback to default scheme
-[36m2020-06-15 08:10:20.692 UTC [grpc] Infof -> DEBU 01d[0m ccResolverWrapper: sending update to cc: {[{peer0.org2.example.com:9051  <nil> 0 <nil>}] <nil> <nil>}
-[36m2020-06-15 08:10:20.692 UTC [grpc] Infof -> DEBU 01e[0m ClientConn switching balancer to "pick_first"
-[36m2020-06-15 08:10:20.692 UTC [grpc] Infof -> DEBU 01f[0m Channel switches to new LB policy "pick_first"
-[36m2020-06-15 08:10:20.692 UTC [grpc] Infof -> DEBU 020[0m Subchannel Connectivity change to CONNECTING
-[36m2020-06-15 08:10:20.693 UTC [grpc] Infof -> DEBU 021[0m Subchannel picks a new address "peer0.org2.example.com:9051" to connect
-[36m2020-06-15 08:10:20.693 UTC [grpc] UpdateSubConnState -> DEBU 022[0m pickfirstBalancer: HandleSubConnStateChange: 0xc00004c2b0, {CONNECTING <nil>}
-[36m2020-06-15 08:10:20.694 UTC [grpc] Infof -> DEBU 023[0m Channel Connectivity change to CONNECTING
-[36m2020-06-15 08:10:20.696 UTC [grpc] Infof -> DEBU 024[0m Subchannel Connectivity change to READY
-[36m2020-06-15 08:10:20.697 UTC [grpc] UpdateSubConnState -> DEBU 025[0m pickfirstBalancer: HandleSubConnStateChange: 0xc00004c2b0, {READY <nil>}
-[36m2020-06-15 08:10:20.697 UTC [grpc] Infof -> DEBU 026[0m Channel Connectivity change to READY
-[36m2020-06-15 08:10:20.700 UTC [grpc] Infof -> DEBU 027[0m parsed scheme: ""
-[36m2020-06-15 08:10:20.700 UTC [grpc] Infof -> DEBU 028[0m scheme "" not registered, fallback to default scheme
-[36m2020-06-15 08:10:20.700 UTC [grpc] Infof -> DEBU 029[0m ccResolverWrapper: sending update to cc: {[{peer0.org2.example.com:9051  <nil> 0 <nil>}] <nil> <nil>}
-[36m2020-06-15 08:10:20.701 UTC [grpc] Infof -> DEBU 02a[0m ClientConn switching balancer to "pick_first"
-[36m2020-06-15 08:10:20.701 UTC [grpc] Infof -> DEBU 02b[0m Channel switches to new LB policy "pick_first"
-[36m2020-06-15 08:10:20.701 UTC [grpc] Infof -> DEBU 02c[0m Subchannel Connectivity change to CONNECTING
-[36m2020-06-15 08:10:20.701 UTC [grpc] Infof -> DEBU 02d[0m Subchannel picks a new address "peer0.org2.example.com:9051" to connect
-[36m2020-06-15 08:10:20.701 UTC [grpc] UpdateSubConnState -> DEBU 02e[0m pickfirstBalancer: HandleSubConnStateChange: 0xc0003d2c90, {CONNECTING <nil>}
-[36m2020-06-15 08:10:20.702 UTC [grpc] Infof -> DEBU 02f[0m Channel Connectivity change to CONNECTING
-[36m2020-06-15 08:10:20.704 UTC [grpc] Infof -> DEBU 030[0m Subchannel Connectivity change to READY
-[36m2020-06-15 08:10:20.704 UTC [grpc] UpdateSubConnState -> DEBU 031[0m pickfirstBalancer: HandleSubConnStateChange: 0xc0003d2c90, {READY <nil>}
-[36m2020-06-15 08:10:20.704 UTC [grpc] Infof -> DEBU 032[0m Channel Connectivity change to READY
-[36m2020-06-15 08:10:20.709 UTC [msp.identity] Sign -> DEBU 033[0m Sign: plaintext: 0ABA070A6208031A0C08ECD99CF70510...6C6C6564436861696E636F6465730A00 
-[36m2020-06-15 08:10:20.709 UTC [msp.identity] Sign -> DEBU 034[0m Sign: digest: 17DEFD0FD653389D6F3F61806BD3517FAD0A44EE9F4C87B8389415D2A6E5081A 
-Installed chaincodes on peer:
-Package ID: fabcar_1:818a997d47292159f275667df9af25812071a7607ead0591c6115faf41cb3823, Label: fabcar_1
+[36m2020-06-15 16:43:04.808 UTC [msp] setupSigningIdentity -> DEBU 019[0m Signing identity expires at 2030-06-12 15:19:00 +0000 UTC
+[36m2020-06-15 16:43:04.809 UTC [msp] GetDefaultSigningIdentity -> DEBU 01a[0m Obtaining default signing identity
+[36m2020-06-15 16:43:04.814 UTC [grpc] Infof -> DEBU 01b[0m parsed scheme: ""
+[36m2020-06-15 16:43:04.814 UTC [grpc] Infof -> DEBU 01c[0m scheme "" not registered, fallback to default scheme
+[36m2020-06-15 16:43:04.814 UTC [grpc] Infof -> DEBU 01d[0m ccResolverWrapper: sending update to cc: {[{peer0.org2.example.com:9051  <nil> 0 <nil>}] <nil> <nil>}
+[36m2020-06-15 16:43:04.815 UTC [grpc] Infof -> DEBU 01e[0m ClientConn switching balancer to "pick_first"
+[36m2020-06-15 16:43:04.815 UTC [grpc] Infof -> DEBU 01f[0m Channel switches to new LB policy "pick_first"
+[36m2020-06-15 16:43:04.815 UTC [grpc] Infof -> DEBU 020[0m Subchannel Connectivity change to CONNECTING
+[36m2020-06-15 16:43:04.816 UTC [grpc] UpdateSubConnState -> DEBU 021[0m pickfirstBalancer: HandleSubConnStateChange: 0xc00041a070, {CONNECTING <nil>}
+[36m2020-06-15 16:43:04.816 UTC [grpc] Infof -> DEBU 023[0m Channel Connectivity change to CONNECTING
+[36m2020-06-15 16:43:04.815 UTC [grpc] Infof -> DEBU 022[0m Subchannel picks a new address "peer0.org2.example.com:9051" to connect
+[36m2020-06-15 16:43:04.823 UTC [grpc] Infof -> DEBU 024[0m Subchannel Connectivity change to READY
+[36m2020-06-15 16:43:04.823 UTC [grpc] UpdateSubConnState -> DEBU 025[0m pickfirstBalancer: HandleSubConnStateChange: 0xc00041a070, {READY <nil>}
+[36m2020-06-15 16:43:04.824 UTC [grpc] Infof -> DEBU 026[0m Channel Connectivity change to READY
+[36m2020-06-15 16:43:04.826 UTC [grpc] Infof -> DEBU 027[0m parsed scheme: ""
+[36m2020-06-15 16:43:04.826 UTC [grpc] Infof -> DEBU 028[0m scheme "" not registered, fallback to default scheme
+[36m2020-06-15 16:43:04.826 UTC [grpc] Infof -> DEBU 029[0m ccResolverWrapper: sending update to cc: {[{peer0.org2.example.com:9051  <nil> 0 <nil>}] <nil> <nil>}
+[36m2020-06-15 16:43:04.827 UTC [grpc] Infof -> DEBU 02a[0m ClientConn switching balancer to "pick_first"
+[36m2020-06-15 16:43:04.827 UTC [grpc] Infof -> DEBU 02b[0m Channel switches to new LB policy "pick_first"
+[36m2020-06-15 16:43:04.827 UTC [grpc] Infof -> DEBU 02c[0m Subchannel Connectivity change to CONNECTING
+[36m2020-06-15 16:43:04.827 UTC [grpc] Infof -> DEBU 02d[0m Subchannel picks a new address "peer0.org2.example.com:9051" to connect
+[36m2020-06-15 16:43:04.827 UTC [grpc] UpdateSubConnState -> DEBU 02e[0m pickfirstBalancer: HandleSubConnStateChange: 0xc00026fd50, {CONNECTING <nil>}
+[36m2020-06-15 16:43:04.828 UTC [grpc] Infof -> DEBU 02f[0m Channel Connectivity change to CONNECTING
+[36m2020-06-15 16:43:04.834 UTC [grpc] Infof -> DEBU 030[0m Subchannel Connectivity change to READY
+[36m2020-06-15 16:43:04.834 UTC [grpc] UpdateSubConnState -> DEBU 031[0m pickfirstBalancer: HandleSubConnStateChange: 0xc00026fd50, {READY <nil>}
+[36m2020-06-15 16:43:04.835 UTC [grpc] Infof -> DEBU 032[0m Channel Connectivity change to READY
+[36m2020-06-15 16:43:04.842 UTC [msp.identity] Sign -> DEBU 033[0m Sign: plaintext: 0AB4070A5C08011A0C0898CA9EF70510...0A0E74776F6F7267736368616E6E656C 
+[36m2020-06-15 16:43:04.843 UTC [msp.identity] Sign -> DEBU 034[0m Sign: digest: 7372E86524E15098879943C61C4AF3B5BF6DBDDDFE7F7ECE5C49C24E87D1EC10 
+[36m2020-06-15 16:43:04.852 UTC [common.channelconfig] NewStandardValues -> DEBU 035[0m Initializing protos for *channelconfig.ChannelProtos
+[36m2020-06-15 16:43:04.852 UTC [common.channelconfig] initializeProtosStruct -> DEBU 036[0m Processing field: HashingAlgorithm
+[36m2020-06-15 16:43:04.852 UTC [common.channelconfig] initializeProtosStruct -> DEBU 037[0m Processing field: BlockDataHashingStructure
+[36m2020-06-15 16:43:04.852 UTC [common.channelconfig] initializeProtosStruct -> DEBU 038[0m Processing field: OrdererAddresses
+[36m2020-06-15 16:43:04.853 UTC [common.channelconfig] initializeProtosStruct -> DEBU 039[0m Processing field: Consortium
+[36m2020-06-15 16:43:04.853 UTC [common.channelconfig] initializeProtosStruct -> DEBU 03a[0m Processing field: Capabilities
+[36m2020-06-15 16:43:04.854 UTC [common.channelconfig] NewStandardValues -> DEBU 03b[0m Initializing protos for *channelconfig.OrdererProtos
+[36m2020-06-15 16:43:04.854 UTC [common.channelconfig] initializeProtosStruct -> DEBU 03c[0m Processing field: ConsensusType
+[36m2020-06-15 16:43:04.854 UTC [common.channelconfig] initializeProtosStruct -> DEBU 03d[0m Processing field: BatchSize
+[36m2020-06-15 16:43:04.854 UTC [common.channelconfig] initializeProtosStruct -> DEBU 03e[0m Processing field: BatchTimeout
+[36m2020-06-15 16:43:04.854 UTC [common.channelconfig] initializeProtosStruct -> DEBU 03f[0m Processing field: KafkaBrokers
+[36m2020-06-15 16:43:04.855 UTC [common.channelconfig] initializeProtosStruct -> DEBU 040[0m Processing field: ChannelRestrictions
+[36m2020-06-15 16:43:04.855 UTC [common.channelconfig] initializeProtosStruct -> DEBU 041[0m Processing field: Capabilities
+[36m2020-06-15 16:43:04.855 UTC [common.channelconfig] NewStandardValues -> DEBU 042[0m Initializing protos for *channelconfig.OrdererOrgProtos
+[36m2020-06-15 16:43:04.855 UTC [common.channelconfig] initializeProtosStruct -> DEBU 043[0m Processing field: Endpoints
+[36m2020-06-15 16:43:04.856 UTC [common.channelconfig] NewStandardValues -> DEBU 044[0m Initializing protos for *channelconfig.OrganizationProtos
+[36m2020-06-15 16:43:04.856 UTC [common.channelconfig] initializeProtosStruct -> DEBU 045[0m Processing field: MSP
+[36m2020-06-15 16:43:04.856 UTC [common.channelconfig] validateMSP -> DEBU 046[0m Setting up MSP for org OrdererOrg
+[36m2020-06-15 16:43:04.856 UTC [msp] newBccspMsp -> DEBU 047[0m Creating BCCSP-based MSP instance
+[36m2020-06-15 16:43:04.856 UTC [msp] New -> DEBU 048[0m Creating Cache-MSP instance
+[36m2020-06-15 16:43:04.857 UTC [msp] Setup -> DEBU 049[0m Setting up MSP instance OrdererMSP
+[36m2020-06-15 16:43:04.857 UTC [msp.identity] newIdentity -> DEBU 04a[0m Creating identity instance for cert -----BEGIN CERTIFICATE-----
+MIICPTCCAeOgAwIBAgIQGhyozgtcF6sX+CXHd3dEjDAKBggqhkjOPQQDAjBpMQsw
+CQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNU2FuIEZy
+YW5jaXNjbzEUMBIGA1UEChMLZXhhbXBsZS5jb20xFzAVBgNVBAMTDmNhLmV4YW1w
+bGUuY29tMB4XDTIwMDYxNDE1MTkwMFoXDTMwMDYxMjE1MTkwMFowaTELMAkGA1UE
+BhMCVVMxEzARBgNVBAgTCkNhbGlmb3JuaWExFjAUBgNVBAcTDVNhbiBGcmFuY2lz
+Y28xFDASBgNVBAoTC2V4YW1wbGUuY29tMRcwFQYDVQQDEw5jYS5leGFtcGxlLmNv
+bTBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABPj2kU48uXCTrgK8Y3w+7dkXF87A
+b/RXpthmI+TV5ppPt0eEhKH7Pvt4ReFDUlP+P1aVWIdE4LOQKnlM6WCngOCjbTBr
+MA4GA1UdDwEB/wQEAwIBpjAdBgNVHSUEFjAUBggrBgEFBQcDAgYIKwYBBQUHAwEw
+DwYDVR0TAQH/BAUwAwEB/zApBgNVHQ4EIgQgz4JDLyROVpy0Glt1loyd8a6KhUQQ
+9p8FzxSNeZUPmbEwCgYIKoZIzj0EAwIDSAAwRQIgFBj31OdCA14pq/PmHFgW16Tw
+MqkXKsEJGvxoLwFQedoCIQCYwZgNPqg8b5iURndOafkIeoB+8BosTkNMdJ7vs3T0
+sg==
+-----END CERTIFICATE-----
+[36m2020-06-15 16:43:04.858 UTC [common.channelconfig] NewStandardValues -> DEBU 04b[0m Initializing protos for *channelconfig.ApplicationProtos
+[36m2020-06-15 16:43:04.858 UTC [common.channelconfig] initializeProtosStruct -> DEBU 04c[0m Processing field: ACLs
+[36m2020-06-15 16:43:04.859 UTC [common.channelconfig] initializeProtosStruct -> DEBU 04d[0m Processing field: Capabilities
+[36m2020-06-15 16:43:04.859 UTC [common.channelconfig] NewStandardValues -> DEBU 04e[0m Initializing protos for *channelconfig.ApplicationOrgProtos
+[36m2020-06-15 16:43:04.859 UTC [common.channelconfig] initializeProtosStruct -> DEBU 04f[0m Processing field: AnchorPeers
+[36m2020-06-15 16:43:04.859 UTC [common.channelconfig] NewStandardValues -> DEBU 050[0m Initializing protos for *channelconfig.OrganizationProtos
+[36m2020-06-15 16:43:04.859 UTC [common.channelconfig] initializeProtosStruct -> DEBU 051[0m Processing field: MSP
+[36m2020-06-15 16:43:04.860 UTC [common.channelconfig] Validate -> DEBU 052[0m Anchor peers for org Org4MSP are anchor_peers:<host:"peer0.org4.example.com" port:9061 > 
+[36m2020-06-15 16:43:04.860 UTC [common.channelconfig] validateMSP -> DEBU 053[0m Setting up MSP for org Org4MSP
+[36m2020-06-15 16:43:04.860 UTC [msp] newBccspMsp -> DEBU 054[0m Creating BCCSP-based MSP instance
+[36m2020-06-15 16:43:04.860 UTC [msp] New -> DEBU 055[0m Creating Cache-MSP instance
+[36m2020-06-15 16:43:04.860 UTC [msp] Setup -> DEBU 056[0m Setting up MSP instance Org4MSP
+[36m2020-06-15 16:43:04.861 UTC [msp.identity] newIdentity -> DEBU 057[0m Creating identity instance for cert -----BEGIN CERTIFICATE-----
+MIICUDCCAfegAwIBAgIQbpcmArex7pnDPlnU2gxfUjAKBggqhkjOPQQDAjBzMQsw
+CQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNU2FuIEZy
+YW5jaXNjbzEZMBcGA1UEChMQb3JnNC5leGFtcGxlLmNvbTEcMBoGA1UEAxMTY2Eu
+b3JnNC5leGFtcGxlLmNvbTAeFw0yMDA2MTQxNTE5MDBaFw0zMDA2MTIxNTE5MDBa
+MHMxCzAJBgNVBAYTAlVTMRMwEQYDVQQIEwpDYWxpZm9ybmlhMRYwFAYDVQQHEw1T
+YW4gRnJhbmNpc2NvMRkwFwYDVQQKExBvcmc0LmV4YW1wbGUuY29tMRwwGgYDVQQD
+ExNjYS5vcmc0LmV4YW1wbGUuY29tMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAE
+b7JUI+crfurX6ogSUjT4QWy8LWUo/2OjKUjkRw614iQnlwktJwIIPtXV5cg5BXVx
+BOew8FeEJNnPgtlScAhnzaNtMGswDgYDVR0PAQH/BAQDAgGmMB0GA1UdJQQWMBQG
+CCsGAQUFBwMCBggrBgEFBQcDATAPBgNVHRMBAf8EBTADAQH/MCkGA1UdDgQiBCDz
+wgKOYpB/JOb+aTi7Ty9Muq4Vp5dlJz5DOWeop4i/yjAKBggqhkjOPQQDAgNHADBE
+AiAVo4jhnCmwCQzkjvhm4/bJ/ZMXreqCREHpOfobv1MrDgIgFKrQzqHs2xQ+vM1X
+H2m/Qs+YM51OH11sN2QTDEN3cvo=
+-----END CERTIFICATE-----
+[36m2020-06-15 16:43:04.861 UTC [common.channelconfig] NewStandardValues -> DEBU 058[0m Initializing protos for *channelconfig.ApplicationOrgProtos
+[36m2020-06-15 16:43:04.861 UTC [common.channelconfig] initializeProtosStruct -> DEBU 059[0m Processing field: AnchorPeers
+[36m2020-06-15 16:43:04.862 UTC [common.channelconfig] NewStandardValues -> DEBU 05a[0m Initializing protos for *channelconfig.OrganizationProtos
+[36m2020-06-15 16:43:04.862 UTC [common.channelconfig] initializeProtosStruct -> DEBU 05b[0m Processing field: MSP
+[36m2020-06-15 16:43:04.862 UTC [common.channelconfig] Validate -> DEBU 05c[0m Anchor peers for org Org2MSP are anchor_peers:<host:"peer0.org2.example.com" port:9051 > 
+[36m2020-06-15 16:43:04.862 UTC [common.channelconfig] validateMSP -> DEBU 05d[0m Setting up MSP for org Org2MSP
+[36m2020-06-15 16:43:04.862 UTC [msp] newBccspMsp -> DEBU 05e[0m Creating BCCSP-based MSP instance
+[36m2020-06-15 16:43:04.863 UTC [msp] New -> DEBU 05f[0m Creating Cache-MSP instance
+[36m2020-06-15 16:43:04.863 UTC [msp] Setup -> DEBU 060[0m Setting up MSP instance Org2MSP
+[36m2020-06-15 16:43:04.863 UTC [msp.identity] newIdentity -> DEBU 061[0m Creating identity instance for cert -----BEGIN CERTIFICATE-----
+MIICUzCCAfigAwIBAgIRAMYxF0Uz238K6g98sDVLN0owCgYIKoZIzj0EAwIwczEL
+MAkGA1UEBhMCVVMxEzARBgNVBAgTCkNhbGlmb3JuaWExFjAUBgNVBAcTDVNhbiBG
+cmFuY2lzY28xGTAXBgNVBAoTEG9yZzIuZXhhbXBsZS5jb20xHDAaBgNVBAMTE2Nh
+Lm9yZzIuZXhhbXBsZS5jb20wHhcNMjAwNjE0MTUxOTAwWhcNMzAwNjEyMTUxOTAw
+WjBzMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMN
+U2FuIEZyYW5jaXNjbzEZMBcGA1UEChMQb3JnMi5leGFtcGxlLmNvbTEcMBoGA1UE
+AxMTY2Eub3JnMi5leGFtcGxlLmNvbTBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IA
+BNNhDUxCViUAMxh9O+Vkbrki81+XGJKKzrAT19ybo8PStAxzWmF2Cj4A0p0QleDQ
++F4u2J/NQiXkyi+c41P5n0+jbTBrMA4GA1UdDwEB/wQEAwIBpjAdBgNVHSUEFjAU
+BggrBgEFBQcDAgYIKwYBBQUHAwEwDwYDVR0TAQH/BAUwAwEB/zApBgNVHQ4EIgQg
+uq97mKVld95q5MkfWMlJMSOSJK9Ayxl4uNLWrueSKRgwCgYIKoZIzj0EAwIDSQAw
+RgIhALFF/u7L09xqS9cjTSifFmpzGDgxLVu1xW+y0N24MggkAiEAjpYrTuVxkZaP
+daulvmFw59OVb3BaMUAs3NCzfus90GQ=
+-----END CERTIFICATE-----
+[36m2020-06-15 16:43:04.864 UTC [msp] Setup -> DEBU 062[0m Setting up the MSP manager (3 msps)
+[36m2020-06-15 16:43:04.864 UTC [msp] Setup -> DEBU 063[0m MSP manager setup complete, setup 3 msps
+[36m2020-06-15 16:43:04.865 UTC [policies] NewManagerImpl -> DEBU 064[0m Proposed new policy Readers for Channel/Orderer/OrdererOrg
+[36m2020-06-15 16:43:04.865 UTC [policies] NewManagerImpl -> DEBU 065[0m Proposed new policy Writers for Channel/Orderer/OrdererOrg
+[36m2020-06-15 16:43:04.865 UTC [policies] NewManagerImpl -> DEBU 066[0m Proposed new policy Admins for Channel/Orderer/OrdererOrg
+[36m2020-06-15 16:43:04.866 UTC [policies] NewManagerImpl -> DEBU 067[0m Proposed new policy Admins for Channel/Orderer
+[36m2020-06-15 16:43:04.866 UTC [policies] NewManagerImpl -> DEBU 068[0m Proposed new policy BlockValidation for Channel/Orderer
+[36m2020-06-15 16:43:04.866 UTC [policies] NewManagerImpl -> DEBU 069[0m Proposed new policy Readers for Channel/Orderer
+[36m2020-06-15 16:43:04.867 UTC [policies] NewManagerImpl -> DEBU 06a[0m Proposed new policy Writers for Channel/Orderer
+[36m2020-06-15 16:43:04.867 UTC [policies] NewManagerImpl -> DEBU 06b[0m Proposed new policy Endorsement for Channel/Application/Org4MSP
+[36m2020-06-15 16:43:04.867 UTC [policies] NewManagerImpl -> DEBU 06c[0m Proposed new policy Readers for Channel/Application/Org4MSP
+[36m2020-06-15 16:43:04.867 UTC [policies] NewManagerImpl -> DEBU 06d[0m Proposed new policy Writers for Channel/Application/Org4MSP
+[36m2020-06-15 16:43:04.868 UTC [policies] NewManagerImpl -> DEBU 06e[0m Proposed new policy Admins for Channel/Application/Org4MSP
+[36m2020-06-15 16:43:04.868 UTC [policies] NewManagerImpl -> DEBU 06f[0m Proposed new policy Endorsement for Channel/Application/Org2MSP
+[36m2020-06-15 16:43:04.868 UTC [policies] NewManagerImpl -> DEBU 070[0m Proposed new policy Readers for Channel/Application/Org2MSP
+[36m2020-06-15 16:43:04.868 UTC [policies] NewManagerImpl -> DEBU 071[0m Proposed new policy Writers for Channel/Application/Org2MSP
+[36m2020-06-15 16:43:04.868 UTC [policies] NewManagerImpl -> DEBU 072[0m Proposed new policy Admins for Channel/Application/Org2MSP
+[36m2020-06-15 16:43:04.869 UTC [policies] NewManagerImpl -> DEBU 073[0m Proposed new policy Readers for Channel/Application
+[36m2020-06-15 16:43:04.869 UTC [policies] NewManagerImpl -> DEBU 074[0m Proposed new policy Writers for Channel/Application
+[36m2020-06-15 16:43:04.869 UTC [policies] NewManagerImpl -> DEBU 075[0m Proposed new policy Admins for Channel/Application
+[36m2020-06-15 16:43:04.869 UTC [policies] NewManagerImpl -> DEBU 076[0m Proposed new policy Endorsement for Channel/Application
+[36m2020-06-15 16:43:04.869 UTC [policies] NewManagerImpl -> DEBU 077[0m Proposed new policy LifecycleEndorsement for Channel/Application
+[36m2020-06-15 16:43:04.870 UTC [policies] NewManagerImpl -> DEBU 078[0m Proposed new policy Readers for Channel
+[36m2020-06-15 16:43:04.870 UTC [policies] NewManagerImpl -> DEBU 079[0m Proposed new policy Writers for Channel
+[36m2020-06-15 16:43:04.870 UTC [policies] NewManagerImpl -> DEBU 07a[0m Proposed new policy Admins for Channel
+[36m2020-06-15 16:43:04.870 UTC [common.configtx] addToMap -> DEBU 07b[0m Adding to config map: [Group]  /Channel
+[36m2020-06-15 16:43:04.870 UTC [common.configtx] addToMap -> DEBU 07c[0m Adding to config map: [Group]  /Channel/Orderer
+[36m2020-06-15 16:43:04.871 UTC [common.configtx] addToMap -> DEBU 07d[0m Adding to config map: [Group]  /Channel/Orderer/OrdererOrg
+[36m2020-06-15 16:43:04.871 UTC [common.configtx] addToMap -> DEBU 07e[0m Adding to config map: [Value]  /Channel/Orderer/OrdererOrg/Endpoints
+[36m2020-06-15 16:43:04.871 UTC [common.configtx] addToMap -> DEBU 07f[0m Adding to config map: [Value]  /Channel/Orderer/OrdererOrg/MSP
+[36m2020-06-15 16:43:04.871 UTC [common.configtx] addToMap -> DEBU 080[0m Adding to config map: [Policy] /Channel/Orderer/OrdererOrg/Admins
+[36m2020-06-15 16:43:04.871 UTC [common.configtx] addToMap -> DEBU 081[0m Adding to config map: [Policy] /Channel/Orderer/OrdererOrg/Readers
+[36m2020-06-15 16:43:04.872 UTC [common.configtx] addToMap -> DEBU 082[0m Adding to config map: [Policy] /Channel/Orderer/OrdererOrg/Writers
+[36m2020-06-15 16:43:04.872 UTC [common.configtx] addToMap -> DEBU 083[0m Adding to config map: [Value]  /Channel/Orderer/ChannelRestrictions
+[36m2020-06-15 16:43:04.872 UTC [common.configtx] addToMap -> DEBU 084[0m Adding to config map: [Value]  /Channel/Orderer/Capabilities
+[36m2020-06-15 16:43:04.872 UTC [common.configtx] addToMap -> DEBU 085[0m Adding to config map: [Value]  /Channel/Orderer/ConsensusType
+[36m2020-06-15 16:43:04.872 UTC [common.configtx] addToMap -> DEBU 086[0m Adding to config map: [Value]  /Channel/Orderer/BatchSize
+[36m2020-06-15 16:43:04.873 UTC [common.configtx] addToMap -> DEBU 087[0m Adding to config map: [Value]  /Channel/Orderer/BatchTimeout
+[36m2020-06-15 16:43:04.873 UTC [common.configtx] addToMap -> DEBU 088[0m Adding to config map: [Policy] /Channel/Orderer/Readers
+[36m2020-06-15 16:43:04.873 UTC [common.configtx] addToMap -> DEBU 089[0m Adding to config map: [Policy] /Channel/Orderer/Writers
+[36m2020-06-15 16:43:04.873 UTC [common.configtx] addToMap -> DEBU 08a[0m Adding to config map: [Policy] /Channel/Orderer/Admins
+[36m2020-06-15 16:43:04.873 UTC [common.configtx] addToMap -> DEBU 08b[0m Adding to config map: [Policy] /Channel/Orderer/BlockValidation
+[36m2020-06-15 16:43:04.874 UTC [common.configtx] addToMap -> DEBU 08c[0m Adding to config map: [Group]  /Channel/Application
+[36m2020-06-15 16:43:04.874 UTC [common.configtx] addToMap -> DEBU 08d[0m Adding to config map: [Group]  /Channel/Application/Org2MSP
+[36m2020-06-15 16:43:04.874 UTC [common.configtx] addToMap -> DEBU 08e[0m Adding to config map: [Value]  /Channel/Application/Org2MSP/AnchorPeers
+[36m2020-06-15 16:43:04.874 UTC [common.configtx] addToMap -> DEBU 08f[0m Adding to config map: [Value]  /Channel/Application/Org2MSP/MSP
+[36m2020-06-15 16:43:04.874 UTC [common.configtx] addToMap -> DEBU 090[0m Adding to config map: [Policy] /Channel/Application/Org2MSP/Admins
+[36m2020-06-15 16:43:04.875 UTC [common.configtx] addToMap -> DEBU 091[0m Adding to config map: [Policy] /Channel/Application/Org2MSP/Endorsement
+[36m2020-06-15 16:43:04.875 UTC [common.configtx] addToMap -> DEBU 092[0m Adding to config map: [Policy] /Channel/Application/Org2MSP/Readers
+[36m2020-06-15 16:43:04.875 UTC [common.configtx] addToMap -> DEBU 093[0m Adding to config map: [Policy] /Channel/Application/Org2MSP/Writers
+[36m2020-06-15 16:43:04.875 UTC [common.configtx] addToMap -> DEBU 094[0m Adding to config map: [Group]  /Channel/Application/Org4MSP
+[36m2020-06-15 16:43:04.876 UTC [common.configtx] addToMap -> DEBU 095[0m Adding to config map: [Value]  /Channel/Application/Org4MSP/AnchorPeers
+[36m2020-06-15 16:43:04.876 UTC [common.configtx] addToMap -> DEBU 096[0m Adding to config map: [Value]  /Channel/Application/Org4MSP/MSP
+[36m2020-06-15 16:43:04.876 UTC [common.configtx] addToMap -> DEBU 097[0m Adding to config map: [Policy] /Channel/Application/Org4MSP/Endorsement
+[36m2020-06-15 16:43:04.876 UTC [common.configtx] addToMap -> DEBU 098[0m Adding to config map: [Policy] /Channel/Application/Org4MSP/Readers
+[36m2020-06-15 16:43:04.876 UTC [common.configtx] addToMap -> DEBU 099[0m Adding to config map: [Policy] /Channel/Application/Org4MSP/Writers
+[36m2020-06-15 16:43:04.877 UTC [common.configtx] addToMap -> DEBU 09a[0m Adding to config map: [Policy] /Channel/Application/Org4MSP/Admins
+[36m2020-06-15 16:43:04.877 UTC [common.configtx] addToMap -> DEBU 09b[0m Adding to config map: [Value]  /Channel/Application/Capabilities
+[36m2020-06-15 16:43:04.877 UTC [common.configtx] addToMap -> DEBU 09c[0m Adding to config map: [Policy] /Channel/Application/Readers
+[36m2020-06-15 16:43:04.877 UTC [common.configtx] addToMap -> DEBU 09d[0m Adding to config map: [Policy] /Channel/Application/Writers
+[36m2020-06-15 16:43:04.877 UTC [common.configtx] addToMap -> DEBU 09e[0m Adding to config map: [Policy] /Channel/Application/Admins
+[36m2020-06-15 16:43:04.878 UTC [common.configtx] addToMap -> DEBU 09f[0m Adding to config map: [Policy] /Channel/Application/Endorsement
+[36m2020-06-15 16:43:04.878 UTC [common.configtx] addToMap -> DEBU 0a0[0m Adding to config map: [Policy] /Channel/Application/LifecycleEndorsement
+[36m2020-06-15 16:43:04.878 UTC [common.configtx] addToMap -> DEBU 0a1[0m Adding to config map: [Value]  /Channel/HashingAlgorithm
+[36m2020-06-15 16:43:04.878 UTC [common.configtx] addToMap -> DEBU 0a2[0m Adding to config map: [Value]  /Channel/BlockDataHashingStructure
+[36m2020-06-15 16:43:04.878 UTC [common.configtx] addToMap -> DEBU 0a3[0m Adding to config map: [Value]  /Channel/OrdererAddresses
+[36m2020-06-15 16:43:04.879 UTC [common.configtx] addToMap -> DEBU 0a4[0m Adding to config map: [Value]  /Channel/Consortium
+[36m2020-06-15 16:43:04.879 UTC [common.configtx] addToMap -> DEBU 0a5[0m Adding to config map: [Value]  /Channel/Capabilities
+[36m2020-06-15 16:43:04.879 UTC [common.configtx] addToMap -> DEBU 0a6[0m Adding to config map: [Policy] /Channel/Admins
+[36m2020-06-15 16:43:04.879 UTC [common.configtx] addToMap -> DEBU 0a7[0m Adding to config map: [Policy] /Channel/Readers
+[36m2020-06-15 16:43:04.879 UTC [common.configtx] addToMap -> DEBU 0a8[0m Adding to config map: [Policy] /Channel/Writers
+[34m2020-06-15 16:43:04.880 UTC [cli.lifecycle.chaincode] setOrdererClient -> INFO 0a9[0m Retrieved channel (twoorgschannel) orderer endpoint: orderer.example.com:7050
+[36m2020-06-15 16:43:04.885 UTC [grpc] WithKeepaliveParams -> DEBU 0aa[0m Adjusting keepalive ping interval to minimum period of 10s
+[36m2020-06-15 16:43:04.886 UTC [grpc] Infof -> DEBU 0ab[0m parsed scheme: ""
+[36m2020-06-15 16:43:04.886 UTC [grpc] Infof -> DEBU 0ac[0m scheme "" not registered, fallback to default scheme
+[36m2020-06-15 16:43:04.886 UTC [grpc] Infof -> DEBU 0ad[0m ccResolverWrapper: sending update to cc: {[{orderer.example.com:7050  <nil> 0 <nil>}] <nil> <nil>}
+[36m2020-06-15 16:43:04.886 UTC [grpc] Infof -> DEBU 0ae[0m ClientConn switching balancer to "pick_first"
+[36m2020-06-15 16:43:04.886 UTC [grpc] Infof -> DEBU 0af[0m Channel switches to new LB policy "pick_first"
+[36m2020-06-15 16:43:04.887 UTC [grpc] Infof -> DEBU 0b0[0m Subchannel Connectivity change to CONNECTING
+[36m2020-06-15 16:43:04.887 UTC [grpc] Infof -> DEBU 0b1[0m Subchannel picks a new address "orderer.example.com:7050" to connect
+[36m2020-06-15 16:43:04.887 UTC [grpc] UpdateSubConnState -> DEBU 0b2[0m pickfirstBalancer: HandleSubConnStateChange: 0xc00046a830, {CONNECTING <nil>}
+[36m2020-06-15 16:43:04.887 UTC [grpc] Infof -> DEBU 0b3[0m Channel Connectivity change to CONNECTING
+[36m2020-06-15 16:43:04.898 UTC [grpc] Infof -> DEBU 0b4[0m Subchannel Connectivity change to READY
+[36m2020-06-15 16:43:04.899 UTC [grpc] UpdateSubConnState -> DEBU 0b5[0m pickfirstBalancer: HandleSubConnStateChange: 0xc00046a830, {READY <nil>}
+[36m2020-06-15 16:43:04.899 UTC [grpc] Infof -> DEBU 0b6[0m Channel Connectivity change to READY
+[36m2020-06-15 16:43:04.902 UTC [msp.identity] Sign -> DEBU 0b7[0m Sign: plaintext: 0ACA070A7208031A0C0898CA9EF70510...31373965343030363364316237333330 
+[36m2020-06-15 16:43:04.903 UTC [msp.identity] Sign -> DEBU 0b8[0m Sign: digest: 9AAB69B85FE37AA3C97EF2C175B90B46E41DFD6CAF612BC9E49B5BD4F13E47BF 
+[36m2020-06-15 16:43:04.936 UTC [msp.identity] Sign -> DEBU 0b9[0m Sign: plaintext: 0ACA070A7208031A0C0898CA9EF70510...17EF25C558E8DFA893270BD7C8679760 
+[36m2020-06-15 16:43:04.936 UTC [msp.identity] Sign -> DEBU 0ba[0m Sign: digest: 78112ED9B147915353D5B68B37D94CC65C352E2F70957E99CDE8B42C54CC99C0 
+[36m2020-06-15 16:43:04.936 UTC [msp.identity] Sign -> DEBU 0bb[0m Sign: plaintext: 0AF2060A1A08051A060898CA9EF70522...00120D1A0B08FFFFFFFFFFFFFFFFFF01 
+[36m2020-06-15 16:43:04.937 UTC [msp.identity] Sign -> DEBU 0bc[0m Sign: digest: 4DAE10DD04D97ECA4810C0F9ABD483C4DE888A421886377135137DEE0102D3A2 
+[34m2020-06-15 16:43:07.013 UTC [chaincodeCmd] ClientWait -> INFO 0bd[0m txid [cdeb4d421a90c31ea96dbe68c4205a650f20c56c1f63305919c67ed0af50c0fd] committed with status (VALID) at 

@@ -1,87 +1,70 @@
 #!/bin/bash
 
-verifyResult() {
-  if [ $1 -ne 0 ]; then
-    echo "!!!!!!!!!!!!!!! "$2" !!!!!!!!!!!!!!!!"
-    echo
-    exit 1
-  fi
-}
+# Author An 2020/6/15
+
+# import utils
+. scripts/utils.sh
 
 # export CORE_PEER_TLS_CERT_FILE=${PWD}/crypto/peerOrganizations/org2.example.com/peers/peer0.org2.example.com/tls/server.crt
 # export CORE_PEER_TLS_KEY_FILE=${PWD}/crypto/peerOrganizations/org2.example.com/peers/peer0.org2.example.com/tls/server.key
 # export CORE_PEER_MSPCONFIGPATH=${PWD}/crypto/peerOrganizations/org2.example.com/users/Admin@org2.example.com/msp
 
-export PEER0_ORG2_CA=${PWD}/crypto/peerOrganizations/org2.example.com/peers/peer0.org2.example.com/tls/ca.crt
-export PEER0_ORG4_CA=${PWD}/crypto/peerOrganizations/org4.example.com/peers/peer0.org4.example.com/tls/ca.crt
+# export PEER0_ORG2_CA=${PWD}/crypto/peerOrganizations/org2.example.com/peers/peer0.org2.example.com/tls/ca.crt
+# export PEER0_ORG4_CA=${PWD}/crypto/peerOrganizations/org4.example.com/peers/peer0.org4.example.com/tls/ca.crt
 
-setEnv() {
-  USING_ORG=$1
-  if [ $USING_ORG -eq 2 ]; then
-    export CORE_PEER_LOCALMSPID="Org2MSP"
-    export CORE_PEER_TLS_ROOTCERT_FILE=$PEER0_ORG2_CA
-    export CORE_PEER_MSPCONFIGPATH=${PWD}/crypto/peerOrganizations/org2.example.com/users/Admin@org2.example.com/msp
-    export CORE_PEER_TLS_CERT_FILE=${PWD}/crypto/peerOrganizations/org2.example.com/peers/peer0.org2.example.com/tls/server.crt
-    export CORE_PEER_TLS_KEY_FILE=${PWD}/crypto/peerOrganizations/org2.example.com/peers/peer0.org2.example.com/tls/server.key
-    export CORE_PEER_ADDRESS=peer0.org2.example.com:9051
-    # export CORE_PEER_ADDRESS=localhost:9051
-  elif [ $USING_ORG -eq 4 ]; then
-    export CORE_PEER_LOCALMSPID="Org4MSP"
-    export CORE_PEER_TLS_ROOTCERT_FILE=$PEER0_ORG4_CA
-    export CORE_PEER_MSPCONFIGPATH=${PWD}/crypto/peerOrganizations/org4.example.com/users/Admin@org4.example.com/msp
-    export CORE_PEER_TLS_CERT_FILE=${PWD}/crypto/peerOrganizations/org4.example.com/peers/peer0.org4.example.com/tls/server.crt
-    export CORE_PEER_TLS_KEY_FILE=${PWD}/crypto/peerOrganizations/org4.example.com/peers/peer0.org4.example.com/tls/server.key
-    export CORE_PEER_ADDRESS=peer0.org4.example.com:9061
-    # export CORE_PEER_ADDRESS=localhost:9061
-  else
-    echo "================== ERROR !!! ORG Unknown =================="
-  fi
-}
+# setEnv() {
+#   USING_ORG=$1
+#   if [ $USING_ORG -eq 2 ]; then
+#     export CORE_PEER_LOCALMSPID="Org2MSP"
+#     export CORE_PEER_TLS_ROOTCERT_FILE=$PEER0_ORG2_CA
+#     export CORE_PEER_MSPCONFIGPATH=${PWD}/crypto/peerOrganizations/org2.example.com/users/Admin@org2.example.com/msp
+#     export CORE_PEER_TLS_CERT_FILE=${PWD}/crypto/peerOrganizations/org2.example.com/peers/peer0.org2.example.com/tls/server.crt
+#     export CORE_PEER_TLS_KEY_FILE=${PWD}/crypto/peerOrganizations/org2.example.com/peers/peer0.org2.example.com/tls/server.key
+#     export CORE_PEER_ADDRESS=peer0.org2.example.com:9051
+#     # export CORE_PEER_ADDRESS=localhost:9051
+#   elif [ $USING_ORG -eq 4 ]; then
+#     export CORE_PEER_LOCALMSPID="Org4MSP"
+#     export CORE_PEER_TLS_ROOTCERT_FILE=$PEER0_ORG4_CA
+#     export CORE_PEER_MSPCONFIGPATH=${PWD}/crypto/peerOrganizations/org4.example.com/users/Admin@org4.example.com/msp
+#     export CORE_PEER_TLS_CERT_FILE=${PWD}/crypto/peerOrganizations/org4.example.com/peers/peer0.org4.example.com/tls/server.crt
+#     export CORE_PEER_TLS_KEY_FILE=${PWD}/crypto/peerOrganizations/org4.example.com/peers/peer0.org4.example.com/tls/server.key
+#     export CORE_PEER_ADDRESS=peer0.org4.example.com:9061
+#     # export CORE_PEER_ADDRESS=localhost:9061
+#   else
+#     echo "================== ERROR !!! ORG Unknown =================="
+#   fi
+# }
 
 
 
 packageChaincode() {
   CC_NAME=$1
   CC_SRC_PATH=$2
-  VERSION=$3
-
-  echo "----------------------------------------$CC_NAME--------------------$CC_SRC_PATH-------------------------$VERSION"
-
-  if [ -n $CC_NAME ]; then
-    echo "1111111"
-  else
-    echo "222 "
-  fi
-
-  # echo
-  # echo "===================== Package chaincode fabcar on channel ${CHANNEL_NAME} ===================== "
-  # echo
-  # export CC_SRC_PATH="/opt/gopath/src/github.com/fabcar/go/"
-  # export CC_RUNTIME_LANGUAGE=golang
-  # export GO111MODULE=on
-  # export GOPROXY=https://goproxy.cn
-  # set -x
-  # peer lifecycle chaincode package fabcar.tar.gz --path ${CC_SRC_PATH} --lang ${CC_RUNTIME_LANGUAGE} --label fabcar_${VERSION} >&log.txt
-  # res=$?
-  # set +x
-  # cat log.txt
-  # verifyResult $res "Chaincode packaging on peer0.org2 has failed"
-  # echo "===================== Chaincode is packaged on peer0.Org2 ===================== "
-  # echo
-}
-
-# installChaincode PEER ORG
-installChaincode() {
+  VERSION="$3"
   echo
-  echo "===================== Install chaincode fabcar for peer0.org2 on channel ${CHANNEL_NAME} ===================== "
+  echo "===================== Package chaincode ${CC_NAME} ===================== "
   echo
-  setEnv 2
   set -x
-  peer lifecycle chaincode install fabcar.tar.gz >&log.txt
+  peer lifecycle chaincode package ${CC_NAME}.tar.gz --path ${CC_SRC_PATH} --lang ${CC_RUNTIME_LANGUAGE} --label ${CC_NAME}_${VERSION} >&log.txt
   res=$?
   set +x
   cat log.txt
-  verifyResult $res "Chaincode installation on peer0.org2 has failed"
+  verifyResult $res "Error Package chaincode ${CC_NAME} failed"
+}
+
+
+installChaincode() {
+  echo
+  echo "===================== Install chaincode ${CC_NAME} for peer0.org2 on channel ${CHANNEL_NAME} ===================== "
+  echo
+  CC_NAME=$1
+  setEnv 2
+  set -x
+  peer lifecycle chaincode install ${CC_NAME}.tar.gz >&log.txt
+  res=$?
+  set +x
+  cat log.txt
+  verifyResult $res "Error Chaincode installation on peer0.org2 has failed"
   echo "===================== Chaincode is installed on peer0.org2 ===================== "
   echo
 
@@ -91,11 +74,11 @@ installChaincode() {
 
   setEnv 4
   set -x
-  peer lifecycle chaincode install fabcar.tar.gz >&log.txt
+  peer lifecycle chaincode install ${CC_NAME}.tar.gz >&log.txt
   res=$?
   set +x
   cat log.txt
-  verifyResult $res "Chaincode installation on peer0.org2 has failed"
+  verifyResult $res "Chaincode installation on peer0.org4 has failed"
   echo "===================== Chaincode is installed on peer0.org4 ===================== "
   echo
 }
@@ -112,7 +95,7 @@ queryInstalled() {
   res=$?
   set +x
   cat log1.txt
-	PACKAGE_ID=$(sed -n "/fabcar_${VERSION}/{s/^Package ID: //; s/, Label:.*$//; p;}" log.txt)
+	PACKAGE_ID=$(sed -n "/${CC_NAME}_${VERSION}/{s/^Package ID: //; s/, Label:.*$//; p;}" log.txt)
   verifyResult $res "Query installed on peer0.org2 has failed"
   echo PackageID is ${PACKAGE_ID}
   echo "===================== Query installed successful on peer0.org2 on channel ===================== "
@@ -121,13 +104,13 @@ queryInstalled() {
   echo
   echo "===================== Query install chaincode fabcar for peer0.org4 on channel ${CHANNEL_NAME} ===================== "
   echo
-  setEnv 2
+  setEnv 4
   set -x
   peer lifecycle chaincode queryinstalled >&log2.txt
   res=$?
   set +x
   cat log2.txt
-  PACKAGE_ID=$(sed -n "/fabcar_${VERSION}/{s/^Package ID: //; s/, Label:.*$//; p;}" log.txt)
+  PACKAGE_ID=$(sed -n "/${CC_NAME}_${VERSION}/{s/^Package ID: //; s/, Label:.*$//; p;}" log.txt)
   verifyResult $res "Query installed on peer0.org4 has failed"
   echo PackageID is ${PACKAGE_ID}
   echo "===================== Query installed successful on peer0.org2 on channel ===================== "
@@ -139,18 +122,20 @@ approveForMyOrg() {
   echo
   echo "===================== Approve chaincode fabcar on channel ${CHANNEL_NAME} ===================== "
   echo
+  CC_NAME="$1"
+  VERSION="$2"
   set -x
   peer lifecycle chaincode queryinstalled >&log1.txt
   res=$?
   set +x
   cat log1.txt
-  export PACKAGE_ID=$(sed -n "/fabcar_${VERSION}/{s/^Package ID: //; s/, Label:.*$//; p;}" log1.txt)
+  export PACKAGE_ID=$(sed -n "/${CC_NAME}_${VERSION}/{s/^Package ID: //; s/, Label:.*$//; p;}" log1.txt)
   export ORDERER_CA=${PWD}/crypto/ordererOrganizations/example.com/orderers/orderer.example.com/msp/tlscacerts/tlsca.example.com-cert.pem
   
 
   setEnv 2
   set -x
-  peer lifecycle chaincode approveformyorg --channelID $CHANNEL_NAME --name fabcar --version $VERSION --init-required --package-id $PACKAGE_ID --sequence $VERSION --tls --cafile $ORDERER_CA >&log2.txt
+  peer lifecycle chaincode approveformyorg --channelID $CHANNEL_NAME --name ${CC_NAME} --version $VERSION --init-required --package-id $PACKAGE_ID --sequence $VERSION --tls --cafile $ORDERER_CA >&log2.txt
   set +x
   cat log2.txt
   verifyResult $res "Chaincode definition approved on peer0.org${ORG} on channel '$CHANNEL_NAME' failed"
@@ -162,7 +147,7 @@ approveForMyOrg() {
   echo
   setEnv 4
   set -x
-  peer lifecycle chaincode approveformyorg --channelID $CHANNEL_NAME --name fabcar --version $VERSION --init-required --package-id $PACKAGE_ID --sequence $VERSION --tls --cafile $ORDERER_CA >&log3.txt
+  peer lifecycle chaincode approveformyorg --channelID $CHANNEL_NAME --name ${CC_NAME} --version $VERSION --init-required --package-id $PACKAGE_ID --sequence $VERSION --tls --cafile $ORDERER_CA >&log3.txt
   set +x
   cat log3.txt
   verifyResult $res "Chaincode definition approved on peer0.org${ORG} on channel '$CHANNEL_NAME' failed"
@@ -177,8 +162,10 @@ checkCommitReadiness() {
   echo "===================== Approve chaincode fabcar on channel ${CHANNEL_NAME} ===================== "
   echo
 
+  CC_NAME="$1"
+  VERSION="$2"
   set -x
-  peer lifecycle chaincode checkcommitreadiness --channelID $CHANNEL_NAME --name fabcar --version ${VERSION} --sequence ${VERSION} --output json --init-required >&log.txt
+  peer lifecycle chaincode checkcommitreadiness --channelID $CHANNEL_NAME --name ${CC_NAME} --version ${VERSION} --sequence ${VERSION} --output json --init-required >&log.txt
   res=$?
   set +x
   cat log.txt
@@ -190,11 +177,13 @@ commitChaincodeDefinition() {
   echo
   echo "===================== Commit chaincode fabcar on channel ${CHANNEL_NAME} ===================== "
   echo
+  CC_NAME="$1"
+  VERSION="$2"
   export ORDERER_CA=${PWD}/crypto/ordererOrganizations/example.com/orderers/orderer.example.com/msp/tlscacerts/tlsca.example.com-cert.pem
   export ORG2_TLS_ROOTCERT_FILE=${PWD}/crypto/peerOrganizations/org2.example.com/peers/peer0.org2.example.com/tls/ca.crt
   export ORG4_TLS_ROOTCERT_FILE=${PWD}/crypto/peerOrganizations/org4.example.com/peers/peer0.org4.example.com/tls/ca.crt
   set -x
-  peer lifecycle chaincode commit -o orderer.example.com:7050 --channelID $CHANNEL_NAME --name fabcar --version ${VERSION} --sequence ${VERSION} --init-required --tls --cafile $ORDERER_CA --peerAddresses peer0.org2.example.com:9051 --tlsRootCertFiles $ORG2_TLS_ROOTCERT_FILE --peerAddresses peer0.org4.example.com:9061 --tlsRootCertFiles $ORG4_TLS_ROOTCERT_FILE >&log.txt
+  peer lifecycle chaincode commit -o orderer.example.com:7050 --channelID $CHANNEL_NAME --name ${CC_NAME} --version ${VERSION} --sequence ${VERSION} --init-required --tls --cafile $ORDERER_CA --peerAddresses peer0.org2.example.com:9051 --tlsRootCertFiles $ORG2_TLS_ROOTCERT_FILE --peerAddresses peer0.org4.example.com:9061 --tlsRootCertFiles $ORG4_TLS_ROOTCERT_FILE >&log.txt
   res=$?
   set +x
   cat log.txt
@@ -206,13 +195,14 @@ commitChaincodeDefinition() {
 # queryCommitted ORG
 queryCommitted() {
 
+  CC_NAME=$1
   setEnv 2
   set -x
-  peer lifecycle chaincode querycommitted --channelID $CHANNEL_NAME --name fabcar >&log.txt
+  peer lifecycle chaincode querycommitted --channelID $CHANNEL_NAME --name ${CC_NAME} >&log.txt
   res=$?
   set +x
   cat log.txt
-  # PACKAGE_ID=$(sed -n "/fabcar_${VERSION}/{s/^Package ID: //; s/, Label:.*$//; p;}" log.txt)
+  # PACKAGE_ID=$(sed -n "/${CC_NAME}_${VERSION}/{s/^Package ID: //; s/, Label:.*$//; p;}" log.txt)
   verifyResult $res "Query installed on peer0.org2 has failed"
   # echo PackageID is ${PACKAGE_ID}
   echo "===================== Query installed successful on peer0.org${ORG} on channel ===================== "
@@ -224,12 +214,16 @@ chaincodeInvokeInit() {
   echo
   echo "===================== Invoke chaincode initLedger for fabcar on channel ${CHANNEL_NAME} ===================== "
   echo
+  CC_NAME="$1"
+  # CC_REQ_JSON="$2"
   export ORDERER_CA=${PWD}/crypto/ordererOrganizations/example.com/orderers/orderer.example.com/msp/tlscacerts/tlsca.example.com-cert.pem
   export ORG2_TLS_ROOTCERT_FILE=${PWD}/crypto/peerOrganizations/org2.example.com/peers/peer0.org2.example.com/tls/ca.crt
   export ORG4_TLS_ROOTCERT_FILE=${PWD}/crypto/peerOrganizations/org4.example.com/peers/peer0.org4.example.com/tls/ca.crt
   set -x
   # peer chaincode invoke -o localhost:7050 --ordererTLSHostnameOverride orderer.example.com --tls --cafile $ORDERER_CA -C $CHANNEL_NAME -n fabcar $PEER_CONN_PARMS --isInit -c '{"function":"initLedger","Args":[]}' >&log.txt
-  peer chaincode invoke -o orderer.example.com:7050 --isInit -C $CHANNEL_NAME -n fabcar --tls --cafile $ORDERER_CA --peerAddresses peer0.org2.example.com:9051 --tlsRootCertFiles $ORG2_TLS_ROOTCERT_FILE --peerAddresses peer0.org4.example.com:9061 --tlsRootCertFiles $ORG4_TLS_ROOTCERT_FILE -c '{"Args":["InitLedger"]}' >&log.txt
+  # peer chaincode invoke -o orderer.example.com:7050 --isInit -C $CHANNEL_NAME -n ${CC_NAME} --tls --cafile $ORDERER_CA --peerAddresses peer0.org2.example.com:9051 --tlsRootCertFiles $ORG2_TLS_ROOTCERT_FILE --peerAddresses peer0.org4.example.com:9061 --tlsRootCertFiles $ORG4_TLS_ROOTCERT_FILE -c '{"Args":["InitLedger"]}' >&log.txt
+  peer chaincode invoke -o orderer.example.com:7050 --isInit -C $CHANNEL_NAME -n ${CC_NAME} --tls --cafile $ORDERER_CA --peerAddresses peer0.org2.example.com:9051 --tlsRootCertFiles $ORG2_TLS_ROOTCERT_FILE --peerAddresses peer0.org4.example.com:9061 --tlsRootCertFiles $ORG4_TLS_ROOTCERT_FILE -c '{"Args":["Init","a","100","b","100"]}' >&log.txt
+
   res=$?
   set +x
   cat log.txt
@@ -278,23 +272,22 @@ CHANNEL_NAME="$1"
 MODE="$2"
 VERSION="$3"
 
-
 if [ "${MODE}" == "packageCC" ]; then
   packageChaincode $3 $4 $5
 elif [ "${MODE}" == "installCC" ]; then
-  installChaincode
+  installChaincode $3
 elif [ "${MODE}" == "queryInstalled" ]; then
   queryInstalled
 elif [ "${MODE}" == "approveForMyOrg" ]; then
-  approveForMyOrg
+  approveForMyOrg $3 $4
 elif [ "${MODE}" == "checkCommitReadiness" ]; then
-  checkCommitReadiness
+  checkCommitReadiness $3 $4
 elif [ "${MODE}" == "commitChaincodeDefinition" ]; then
-  commitChaincodeDefinition
+  commitChaincodeDefinition $3 $4
 elif [ "${MODE}" == "queryCommitted" ]; then
-  queryCommitted
+  queryCommitted $3
 elif [ "${MODE}" == "chaincodeInvokeInit" ]; then
-  chaincodeInvokeInit
+  chaincodeInvokeInit $3
 elif [ "${MODE}" == "chaincodeQuery" ]; then
   chaincodeQuery
 else
